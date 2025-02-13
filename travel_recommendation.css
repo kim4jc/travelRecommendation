@@ -153,3 +153,39 @@ body{
     background-color: rgba(10,10,200,.6);
 }
 
+#contactUsTitle{
+    margin: 0px;
+    display: flex;
+    color: white;
+    width: 600px;
+    font-size: 80px;
+    padding-left: 25px;
+    padding-top: 25px;
+}
+
+#contactForm{
+    max-width: 1000px;
+}
+
+#contactForm label{
+    color: black;
+    font-size: 20px;
+}
+
+#contactForm input, #contactForm textarea{
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 8px;
+}
+
+#contactUsBtn{
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#contactUsBtn:hover {
+    background-color: #0056b3;
+}
