@@ -1,0 +1,67 @@
+nav {
+    background-color: #212226;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+#websiteName{
+    display: flex;
+    color: white;
+    margin-right: auto;
+}
+
+#navigationLinks{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-grow: 1;
+}
+
+#searchBarDiv{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: auto;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 3px;
+}
+
+body{
+    margin: 0px;
+}
+
+#pageBody{
+    background-image:
+        linear-gradient(to right, rgba(0, 75, 255, .4) 15% , rgba(0, 125, 255, .4) 30% , rgba(0, 100, 255, 0) 50%),
+        url('./travel_recommendation_background_image.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+#webpageSlogan{
+    display: flex;
+    width: 400px;
+    color: white;
+    font-size: 100px;
+    padding-top: 50px;
+    padding-left: 25px;
+}
+
+#webpageIntro{
+    display: flex;
+    color:white;
+    width: 400px;
+    font-size: 22px;
+    padding-top: 25px;
+    padding-left: 25px;
+}
