@@ -3,13 +3,12 @@ nav {
     padding: 20px;
     display: flex;
     align-items: center;
-    justify-content: center; 
+    justify-content: space-between;    
 }
 
 #websiteName{
-    display: flex;
     color: white;
-    margin-right: auto;
+    flex: 1;
 }
 
 #navigationLinks{
@@ -17,14 +16,19 @@ nav {
     align-items: center;
     justify-content: center;
     gap: 15px;
-    flex-grow: 1;
+    flex: 1.385;
 }
 
-#searchBarDiv{
+#searchBarDiv, #placeholderDiv{
     display: flex;
     align-items: center;
     gap: 15px;
-    margin-left: auto;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+#searchBar{
+    width: 180px;
 }
 
 nav a{
@@ -46,6 +50,10 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 25px;
 }
 
 #webpageSlogan{
@@ -64,4 +72,35 @@ body{
     font-size: 22px;
     padding-top: 25px;
     padding-left: 25px;
+}
+
+#aboutUsTitle{
+    margin: 0px;
+    display: flex;
+    color: white;
+    width: 400px;
+    font-size: 50px;
+    padding-left: 25px;
+    padding-top: 25px;
+}
+
+#companyInfo{
+    display: flex;
+    color: white;
+    font-size: 22px;
+    background-color: rgba(110,110,110,.4);
+    width: 95%;
+    padding: 10px;
+    margin: 25px auto;
+}
+
+#teamMembers{
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+    font-size: 22px;
+    background-color: rgba(110,110,110,.4);
+    width: 95%;
+    padding: 10px;
+    margin: 25px auto;
 }
