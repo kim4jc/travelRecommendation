@@ -6,7 +6,19 @@ contactUsBtn.addEventListener("click", function(event){
     const email = document.getElementById("email").value;
     const message = document.getElementById("message").value;
     if(name && email && message){
-    alert('Thank you for contacting us!')
+    alert('Thank you for contacting us!');
+    }
+    else if(!name){
+        alert("Please enter your name");
+        document.getElementById("name").focus();
+    }
+    else if(!email){
+        alert("Please enter your email");
+        document.getElementById("email").focus();
+    }
+    else if(!message){
+        alert("Please enter your message");
+        document.getElementById("message").focus();
     }
 });
 }
@@ -38,10 +50,11 @@ function searchPlace(){
                 data[searchInput].forEach(country => {
                     country.cities.forEach(city => {
                         const itemDiv = document.createElement("div");
+                        itemDiv.id = "locationContainer"
                         itemDiv.innerHTML =
-                        `<img src="${city.imageUrl}" alt="${city.name}" />
-                        <h3 id="cityname">${city.name}</h3>
-                        <p id="citydescription">${city.description}</p>`;
+                        `<img src="${city.imageUrl}" id="styledImg" alt="${city.name}" />
+                        <h3 id="styledName">${city.name}</h3>
+                        <p id="styledDescription">${city.description}</p>`;
                         resultsDiv.appendChild(itemDiv);
                     });
                 });
@@ -49,10 +62,11 @@ function searchPlace(){
             else{
                 data[searchInput].forEach(item => {
                     const itemDiv = document.createElement("div");
+                    itemDiv.id = "locationContainer"
                     itemDiv.innerHTML =
-                        `<img src="${item.imageUrl}" alt="${item.name}" />
-                        <h3 id="itemName">${item.name}</h3>
-                        <p id="itemDescription">${item.description}</p>`;
+                        `<img src="${item.imageUrl}" id="styledImg" alt="${item.name}" />
+                        <h3 id="styledName">${item.name}</h3>
+                        <p id="styledDescription">${item.description}</p>`;
                         resultsDiv.appendChild(itemDiv);
             });
         }
@@ -65,5 +79,11 @@ function searchPlace(){
         console.error('Error:', error);
         resultsDiv.innerHTML = 'An error occurred while fetching data.';
     });
-
 }
+
+const resetBtn = document.getElementById("resetBtn");
+resetBtn.addEventListener("click",function(click){
+    const outputResults = document.getElementById("resultsDiv");
+    outputResults.innerHTML='';
+    document.getElementById("searchBar").value = '';
+})
